@@ -1,0 +1,40 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ingredients_list_widget"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+    <TextView
+        android:id="@+id/widget_recipe_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/raleway"
+        android:background="@color/colorPrimary"
+        android:paddingTop="@dimen/small_margin"
+        android:paddingBottom="@dimen/small_margin"
+        android:gravity="center_horizontal"
+        tools:text="Nutella Pie"
+        android:textSize="@dimen/list_label_text_size"
+        android:textColor="@android:color/white" />
+
+    <TextView
+        android:id="@+id/widget_empty_list_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:fontFamily="@font/raleway"
+        android:textSize="@dimen/list_item_text_size"
+        android:gravity="center_horizontal"
+        android:textColor="@android:color/primary_text_light"
+        android:text="@string/empty_widget_list"
+        android:visibility="invisible"/>
+
+    <ListView
+        android:id="@+id/widget_list_view"
+        android:layout_below="@id/widget_recipe_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:listitem="@layout/widget_list_item"/>
+
+</RelativeLayout>

@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">Bakemate</string>
+
+    <!-- List -->
+    <string name="recipe_item_image_description">Image of the cake that recipe is about.</string>
+
+    <!-- Recipe -->
+    <string name="ingredients_label">Ingredients</string>
+    <string name="steps_label">Method</string>
+
+    <!-- Step -->
+    <string name="step_title">Step By Step</string>
+    <string name="step_detail_description">Recipe Introduction</string>
+    <string name="error_image">Image displayed while there is no video available.</string>
+    <string name="no_step_selected">Follow the steps to prepare the cake</string>
+
+    <!-- Player -->
+    <string name="no_internet">Connect to internet to watch the video.</string>
+    <string name="no_video">No video available for this step.</string>
+
+    <!-- Widget -->
+    <string name="empty_widget_list">Select recipe to display its ingredients.</string>
+
+    <!-- Checking screen size -->
+    <string name="screen_type">phone</string>
+</resources>

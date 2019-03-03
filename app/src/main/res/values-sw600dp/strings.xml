@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources><!-- Checking screen size -->
+    <string name="screen_type">tablet</string>
+</resources>

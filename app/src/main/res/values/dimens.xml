@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--Widths and Heights-->
+    <dimen name="list_item_image_height">220dp</dimen>
+    <dimen name="recipe_toolbar_image_height">250dp</dimen>
+    <dimen name="standard_toolbar_height">56dp</dimen>
+    <dimen name="exoplayer_layout_height">300dp</dimen>
+
+    <!--Margins-->
+    <dimen name="x_small_margin">4dp</dimen>
+    <dimen name="small_margin">8dp</dimen>
+    <dimen name="standard_margin">16dp</dimen>
+    <dimen name="large_margin">20dp</dimen>
+    <dimen name="error_text_margin">50dp</dimen>
+
+    <!--Text Sizes-->
+    <dimen name="recipes_list_image_label_text_size">18sp</dimen>
+    <dimen name="list_label_text_size">16sp</dimen>
+    <dimen name="list_item_text_size">14sp</dimen>
+    <dimen name="list_item_bold_text_size">12sp</dimen>
+
+</resources>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/item_recipe_container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cv_recipe_item"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/list_item_image_height"
+        android:layout_gravity="center"
+        android:layout_marginBottom="@dimen/x_small_margin"
+        android:layout_marginEnd="@dimen/small_margin"
+        android:layout_marginStart="@dimen/small_margin"
+        android:layout_marginTop="@dimen/x_small_margin"
+        card_view:cardCornerRadius="@dimen/x_small_margin">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorPrimary">
+
+            <ImageView
+                android:id="@+id/iv_recipe_item_image"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:contentDescription="@string/recipe_item_image_description"
+                android:scaleType="centerCrop"
+                tools:src="@drawable/placeholder_icon" />
+            
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/scrim_gradient"/>
+
+            <TextView
+                android:id="@+id/tv_recipe_item_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:fontFamily="@font/raleway"
+                android:padding="@dimen/standard_margin"
+                android:textColor="@android:color/primary_text_dark"
+                android:textSize="@dimen/recipes_list_image_label_text_size"
+                tools:text="Nutella Pie" />
+
+        </FrameLayout>
+
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>

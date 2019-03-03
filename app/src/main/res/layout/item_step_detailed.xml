@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_step_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/standard_margin"
+        android:fontFamily="@font/raleway"
+        android:textColor="@android:color/primary_text_light"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="STEP 1 OF 10" />
+
+    <TextView
+        android:id="@+id/tv_step_short_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/raleway"
+        android:textColor="@android:color/primary_text_light"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="@id/tv_step_count"
+        app:layout_constraintTop_toBottomOf="@id/tv_step_count"
+        tools:text="@string/step_detail_description" />
+
+    <RelativeLayout
+        android:id="@+id/player_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/exoplayer_layout_height"
+        android:layout_marginTop="@dimen/standard_margin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_step_short_description">
+
+        <com.google.android.exoplayer2.ui.PlayerView
+            android:id="@+id/player_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="invisible" />
+
+        <ImageView
+            android:id="@+id/no_video_image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/placeholder_icon"
+            android:contentDescription="@string/error_image"
+            android:visibility="invisible" />
+
+        <TextView
+            android:id="@+id/no_video_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/error_text_margin"
+            android:fontFamily="@font/raleway"
+            android:text="@string/no_video"
+            android:textColor="@color/colorPrimaryDark"
+            android:textStyle="bold"
+            android:visibility="invisible" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_step_full_description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/standard_margin"
+        android:fontFamily="@font/raleway"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/player_layout"
+        tools:text="@string/step_detail_description" />
+
+</android.support.constraint.ConstraintLayout>

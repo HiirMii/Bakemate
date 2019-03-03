@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_recipe"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.recipe.RecipeActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/tb_recipe"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/standard_toolbar_height"
+        android:background="@color/colorPrimary"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:elevation="@dimen/x_small_margin"/>
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tb_recipe"
+        android:paddingTop="@dimen/standard_toolbar_height">
+
+        <FrameLayout
+            android:id="@+id/recipe_fragment_container"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/divider"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintHorizontal_weight="0.35"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+        </FrameLayout>
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="1dp"
+            android:layout_height="wrap_content"
+            android:background="@android:color/darker_gray"
+            app:layout_constraintBottom_toBottomOf="@id/recipe_fragment_container"
+            app:layout_constraintEnd_toStartOf="@id/step_fragment_container"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintHorizontal_weight="0.0"
+            app:layout_constraintStart_toEndOf="@id/recipe_fragment_container"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <FrameLayout
+            android:id="@+id/step_fragment_container"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toBottomOf="@id/divider"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintHorizontal_weight="0.6"
+            app:layout_constraintStart_toEndOf="@id/divider"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <FrameLayout
+                android:id="@+id/empty_step"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/exoplayer_layout_height"
+                android:layout_marginTop="@dimen/standard_margin"
+                android:visibility="gone">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/placeholder_icon" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:fontFamily="@font/raleway"
+                    android:textStyle="bold"
+                    android:gravity="center_horizontal"
+                    android:layout_marginBottom="@dimen/error_text_margin"
+                    android:layout_gravity="center_horizontal|bottom"
+                    android:text="@string/no_step_selected"/>
+
+            </FrameLayout>
+
+        </FrameLayout>
+
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.constraint.ConstraintLayout>
